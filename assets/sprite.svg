@@ -1,17 +1,17 @@
     <!-- SVG Sprite -->
-    <svg width="0" height="0" class="hidden">
+  <svg width="0" height="0" class="hidden">
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 13" id="burger">
     <line y1="0.5" x2="24" y2="0.5" stroke="#417A82"></line>
     <line y1="6.5" x2="24" y2="6.5" stroke="#417A82"></line>
     <line y1="12.5" x2="24" y2="12.5" stroke="#417A82"></line>
   </symbol>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="cart icon">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="cart-icon">
     <circle cx="20" cy="20" r="20" fill="white"></circle>
     <path d="M16.3789 16.7432H26.9599L25.7843 23.4054H15.5951L12.4599 14H8.54102" stroke="#417A82" stroke-linejoin="round"></path>
     <circle cx="17.1623" cy="26.9323" r="1.06757" stroke="#417A82"></circle>
     <circle cx="24.217" cy="26.9323" r="1.06757" stroke="#417A82"></circle>
   </symbol>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" id="short search">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" id="short-search">
     <circle cx="4.5" cy="4.5" r="4" transform="matrix(-1 0 0 1 16 6)" stroke="#417A82"></circle>
     <path d="M13.5001 13.5L17.4242 18.5435" stroke="#417A82"></path>
     <rect x="0.5" y="0.5" width="24" height="24" rx="12" stroke="#417A82"></rect>
@@ -113,6 +113,11 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M5 15.0752L5 5.0752L6 5.0752L6 15.0752L5 15.0752Z" fill="#417A82"></path>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00012 4.0752H20.9221V22.0752H8.00012V21.0752H19.9221V5.0752H3.00012V14.9973H2.00012V4.0752Z" fill="#417A82"></path>
   </symbol>
+   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+    <circle cx="4.5" cy="4.5" r="4" transform="matrix(-1 0 0 1 16 6)" stroke="#417A82" />
+    <path d="M13.5001 13.5L17.4242 18.5435" stroke="#417A82" />
+    <rect x="0.5" y="0.5" width="24" height="24" rx="12" stroke="#417A82" />
+  </symbol>
 </svg>
     <h1>
       SVG Sprite Demo
@@ -121,29 +126,31 @@
         created with <a href="https://svgsprit.es/">svgsprit.es</a>
       </small>
     </h1>
-    <svg class="icon">
+    <svg class="sidebar-menu__nav__icon">
   <use xlink:href="#burger"></use>
-</svg><svg class="icon">
-  <use xlink:href="#cart icon"></use>
-</svg><svg class="icon">
-  <use xlink:href="#short search"></use>
-</svg><svg class="icon">
+</svg><svg class="slider__order__item__icon">
+  <use xlink:href="#cart-icon"></use>
+</svg><svg class="sidebar-menu__nav__icon">
+  <use xlink:href="#short-search"></use>
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Vector"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Акции"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Внешняя"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#жалюзи"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Калькулятор"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Москтиные"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Плиссе"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Рулонные"></use>
-</svg><svg class="icon">
+</svg><svg class="sidebar-menu__nav__icon">
   <use xlink:href="#Электрика"></use>
+</svg><svg class="sidebar-menu__nav__icon">
+  <use xlink:href="#short-search"></use>
 </svg>
 
