@@ -8,11 +8,11 @@
     <title>Шторы</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="data.js" type="module"></script>
+    <script defer src="mockupData.js" type="module"></script>
+    <script defer src="slider.js" type="module"></script>
     <script defer src="main.js"></script>
 </head>
 
@@ -45,7 +45,6 @@
                 </a>
             </span>
         </aside>
-        <main class="main">
             <section class="slider">
                 <!-- Слайдер -->
                 <aside class="slider__info">
@@ -57,7 +56,7 @@
                     <aside class="slider__info--description">
                         «Lorem» — производитель изделий для внутренней и внешней<br>lorem
                     </aside>
-                    <button class="slider__info--calculate">
+                    <button class="slider__info--calculate" onclick="showModal()">
                         <p>КАЛЬКУЛЯТОР</p>
                     </button>
                 </aside>
@@ -80,10 +79,11 @@
                         aria-label="Следующий слайд"></span>
                 </div>
             </section>
+        </section>
             <!-- Блок популярное -->
             <section class="popular">
-                <h1 class="popular__title">Популярное</h1>
-                <div  class="popular__container">
+                <div class="popular__container">
+                    <h1 class="popular__title">Популярное</h1>
                     <div class="popular__container__content">
                         <!-- Рендерим в js -->
                     </div>
@@ -92,37 +92,34 @@
             </section>
 
             <!-- Блок лучшие предложения -->
-            <section class="best-offers">
-                <h2 class="best-offers__title">Лучшие предложения</h2>
-                <div class="best-offers__grid">
-                    <article class="card">
-                        <h3 class="card__title">Товар 1</h3>
-                        <p class="card__description">Описание товара 1</p>
-                        <button class="card__button">Купить</button>
-                    </article>
-                    <article class="card">
-                        <h3 class="card__title">Товар 2</h3>
-                        <p class="card__description">Описание товара 2</p>
-                        <button class="card__button">Купить</button>
-                    </article>
-                    <article class="card">
-                        <h3 class="card__title">Товар 3</h3>
-                        <p class="card__description">Описание товара 3</p>
-                        <button class="card__button">Купить</button>
-                    </article>
-                    <article class="card">
-                        <h3 class="card__title">Товар 3</h3>
-                        <p class="card__description">Описание товара 3</p>
-                        <button class="card__button">Купить</button>
-                    </article>
+            <section class="best__offers">
+                <aside class="best__offers__header">
+                    <h2 class="best__offers__header__title">ЛУЧШИЕ ПРЕДЛОЖЕНИЯ</h2>
+                    <div class="best__offers__control">
+                        <span class="best__offers__control__action best__offers__control__action--prev"
+                            aria-label="Предыдущий слайд"></span>
+                        <span class="best__offers__control__action__info"></span>
+                        <span class="best__offers__control__action best__offers__control__action--next"
+                            aria-label="Следующий слайд"></span>
+                    </div>
+                </aside>
+                <div class="best__offers__products">
+                    <!-- Рендерим в js -->
                 </div>
             </section>
-        </main>
-    </section>
     <!-- Подвал -->
     <footer class="footer">
-        <p class="footer__text">&copy; 2025 Все права защищены.</p>
+        <p class="footer__text">&copy; 2020 Lorem</p>
     </footer>
+    <dialog id="modal">
+        <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" onClick="closeModal()">
+            <path
+                d="m12 10.586 6.293-6.295a1 1 0 0 1 1.414 1.414L13.414 12l6.293 6.294a1 1 0 1 1-1.414 1.415L12 13.414 5.707 19.71a1 1 0 0 1-1.414-1.415L10.586 12 4.293 5.705a1 1 0 1 1 1.414-1.414L12 10.586Z">
+            </path>
+        </svg>
+        <h1>КАЛЬКУЛЯТОР</h1>
+        <p>Тут инпуты и кнопка для расчетов!</p>
+    </dialog>
 </body>
 
 </html>
