@@ -3,23 +3,20 @@ window.slider = function (element, array, textElement, carts, margin = 66) {
     let widthContainer;
     let width;
 
+    if (carts) {
+        width = innerWidth < 1440 ? innerWidth - padding : 1290
+        widthContainer = (array.length * (256 + margin)) - margin
+    } else {
+        width = innerWidth < 1440 ? innerWidth : 1368;
+        widthContainer = array.length * width
+    }
+
     function nextSlide() {
-        updateSlider("increment");
+        moveSlider("increment", width, widthContainer);
     }
 
     function prevSlide() {
-        updateSlider("decrement");
-    }
-
-    function updateSlider(operator) {
-        if (carts) {
-            width = innerWidth < 1440 ? innerWidth - padding : 1290
-            widthContainer = (array.length * (256 + margin)) - margin
-        } else {
-            width = innerWidth < 1440 ? innerWidth - widthSidebar : 1368;
-            widthContainer = array.length * width
-        }
-        moveSlider(operator, width, widthContainer)
+        moveSlider("decrement", width, widthContainer);
     }
 
     function moveSlider(operator, width, widthContainer) {
@@ -48,4 +45,15 @@ window.slider = function (element, array, textElement, carts, margin = 66) {
         next: nextSlide,
         prev: prevSlide,
     }
+}
+
+window.moveSlider = function (count, sliderTrack) {
+    const squaresElements = document.querySelectorAll(".slider__control-squares-count")
+    sliderTrack.style.transform = `translateX(-${count * innerWidth}px)`;
+    squaresElements.forEach((square, index) => {
+        square.classList.remove("count-active");
+        if (index === count) {
+            square.classList.add("count-active");
+        }
+    });
 }

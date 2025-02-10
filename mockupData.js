@@ -13,17 +13,17 @@ window.MENUI_TEMS = [
 
 window.SLIDER_IMAGES = [
     {
-        src: "./assets/images/rectangle.png",
+        src: ["./assets/images/rectangle.png", "./assets/images/rectangleSmall.png"],
         alt: "Slide 1",
         caption: "Описание изображения"
     },
     {
-        src: "./assets/images/image25.png",
+        src: ["./assets/images/image25.png"],
         alt: "Slide 2",
         caption: "Описание изображения"
     },
     {
-        src: "./assets/images/nets.png",
+        src: ["./assets/images/nets.png"],
         alt: "Slide 3",
         caption: "Описание изображения"
     },
@@ -184,4 +184,4 @@ window.BEST_OFFERS = [
 ];
 
 window.padding = 20
-window.widthSidebar = 72
+window.isSidebarOpen = false;
