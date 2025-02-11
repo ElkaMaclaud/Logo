@@ -1,15 +1,7 @@
-window.slider = function (element, array, textElement, carts, margin = 66) {
+window.slider = function (element, array, textElement, carts, margin) {
     let currentIndex = 0;
-    let widthContainer;
-    let width;
 
-    if (carts) {
-        width = innerWidth < 1440 ? innerWidth - padding : 1290
-        widthContainer = (array.length * (256 + margin)) - margin
-    } else {
-        width = innerWidth < 1440 ? innerWidth : 1368;
-        widthContainer = array.length * width
-    }
+    const { width, widthContainer, size, actualWidthContainer } = widthCalculation(array, carts, margin)
 
     function nextSlide() {
         moveSlider("increment", width, widthContainer);
@@ -26,7 +18,8 @@ window.slider = function (element, array, textElement, carts, margin = 66) {
                 currentIndex++
                 shearWidth = currentIndex * width
             } else if (widthContainer - width * (currentIndex + 1) > 0) {
-                shearWidth = currentIndex * width + (widthContainer - width * (currentIndex + 1)) + margin
+                const baseWidth = actualWidthContainer || width;
+                shearWidth = currentIndex * baseWidth + widthContainer - baseWidth * (currentIndex + 1) + (actualWidthContainer ? 0 : margin);
                 currentIndex++
             } else { return };
         } else {
@@ -37,7 +30,7 @@ window.slider = function (element, array, textElement, carts, margin = 66) {
         }
         element.style.transform = `translateX(-${shearWidth}px)`;
         if (textElement) {
-            textElement.textContent = `${currentIndex + 1}/${Math.ceil(widthContainer / width)}`;
+            textElement.textContent = `${currentIndex + 1}/${size || Math.ceil(widthContainer / width)}`;
         }
     }
 

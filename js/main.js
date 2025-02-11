@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.querySelector(".slider__control__action__info");
     renderSlides(sliderTrack, SLIDER_IMAGES, textElement)
 
-    if(innerWidth < 900) {
+    if(innerWidth < 1200) {
         renderSquares(3, "slider__control-squares", sliderTrack)
     }
     const imageSlider = slider(sliderTrack, SLIDER_IMAGES, textElement);
@@ -19,10 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const bestOffersNextButton = document.querySelector(".best__offers__control__action--prev");
     const bestOffersPrevtButton = document.querySelector(".best__offers__control__action--next");
 
-    const width = innerWidth < 1440 ? innerWidth - padding : 1290
-    const margin = innerWidth < 1440 ? padding : 66
-    const widthContainer = (BEST_OFFERS.length * (256 + margin)) - margin
-    const countSlide = Math.ceil(widthContainer / width)
+    const margin = innerWidth < 1200 ? padding : 66
+    const count = widthCalculation(BEST_OFFERS, true, margin).size
+    const countSlide = Math.ceil(count)
 
     renderProductCard("best__offers__products", BEST_OFFERS, infoElement, countSlide)
     const productContainer = document.querySelector(".best__offers__products");

@@ -32,7 +32,6 @@ window.toggleSidebarDetailed = function () {
         renderMenu(MENUI_TEMS, "sidebar_detailed-menu__nav", true);
         isSidebarOpen = true
     }
-
     if (sidebarDetailed) {
         if (sidebarDetailed.style.display === "flex") {
             sidebarDetailed.style.display = "none";
@@ -46,9 +45,45 @@ window.toggleSidebarDetailed = function () {
 
 window.handleClickOutside = function (event, element) {
     const isClickInsideElement = element.contains(event.target);
+    const input = document.querySelector(".sidebar_detailed-search-container")
+    const  inputClick = input.contains(event.target);
 
-    if (isClickInsideElement) {
+    if (isClickInsideElement && !inputClick) {
         element.style.display = "none";
         document.removeEventListener("click", (e) => handleClickOutside(e, element, buttonElement));
+    }
+}
+
+window.widthCalculation = function(array, carts, margin) {
+    let widthContainer;
+    let width;
+    if (carts) {
+        let actualWidthContainer;
+        let size = 4;
+        widthContainer = (array.length * (256 + margin)) - margin
+        if (innerWidth >= 1440) {
+            width = 1290;       
+        } else if (innerWidth > 1199) {
+            actualWidthContainer = innerWidth - 216
+            const count = Math.floor(actualWidthContainer / (256 + margin))
+            width = (256 + margin) * count
+            size = Math.ceil(widthContainer / width)
+        } else {
+            actualWidthContainer = innerWidth - padding
+            const count = Math.floor(actualWidthContainer / (256 + margin))
+            width = (256 + margin) * count
+            size = Math.ceil(widthContainer / width)
+        }
+        return {width, widthContainer, size, actualWidthContainer}
+    } else {
+        if (innerWidth >= 1440) {
+            width = 1368;
+        } else if (innerWidth > 1199) {
+            width = innerWidth - 72
+        } else {
+            width = innerWidth
+        }
+        widthContainer = array.length * width
+        return {width, widthContainer}
     }
 }

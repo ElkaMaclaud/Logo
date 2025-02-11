@@ -15,7 +15,7 @@ window.renderMenu = function (menuItems, menuSelector, text) {
         a.classList.add(`${menuSelector}__link`);
 
         const img = document.createElement("img");
-        img.src = `assets/icons/${item.icon}.svg`;
+        img.src = `../assets/icons/${item.icon}.svg`;
         img.alt = item.icon;
         img.classList.add(`${menuSelector}__icon`);
 
@@ -107,15 +107,15 @@ window.renderProductCard = function (containerId, data, infoElement, countSlide)
                 <img src="${slide.image}" alt="${slide.title}" class="${containerId}-card-wrapper-image">
                 <div class="${containerId}-card-wrapper-top-container">
                     <div class="${containerId}-card-wrapper-top-container-iconWrapper">
-                        ${slide.transparency ? `<img src="assets/icons/${slide.transparency}" alt="transparency">` : ""}
-                        ${slide.composition ? `<img src="assets/icons/${slide.composition}" alt="composition">` : ""}
-                        ${slide.productWidth ? `<img src="assets/icons/${slide.productWidth}" alt="productWidth">` : ""}
+                        ${slide.transparency ? `<img src="../assets/icons/${slide.transparency}" alt="transparency">` : ""}
+                        ${slide.composition ? `<img src="../assets/icons/${slide.composition}" alt="composition">` : ""}
+                        ${slide.productWidth ? `<img src="../assets/icons/${slide.productWidth}" alt="productWidth">` : ""}
                     </div>
                     <div class="${containerId}-card-wrapper-top-container-discountInfo"><span>-${slide.discount}</span></div>
                 </div>
                 <div class="${containerId}-card-wrapper-bottom-container">
                      ${slide.colors.map(item => `
-                <img src="assets/backgroundImages/${item}" alt="Цвет"></img>
+                <img src="../assets/backgroundImages/${item}" alt="Цвет"></img>
             `).join('')}
                 </div>
             </figure>
@@ -130,7 +130,7 @@ window.renderProductCard = function (containerId, data, infoElement, countSlide)
                     </div>
                     <aside class="${containerId}-card-info-button-container">
                         <button class="${containerId}-card-info-button">ОФОРМИТЬ ЗАЯВКУ</button>
-                        <img src="/assets/icons/cart.svg" alt="Cart Icon">
+                        <img src="../assets/icons/cart.svg" alt="Cart Icon">
                     </aside>
                 </div>
             </div>

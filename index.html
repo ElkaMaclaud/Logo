@@ -14,34 +14,35 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="mockupData.js" type="module"></script>
-    <script defer src="renderComponent.js" type="module"></script>
-    <script defer src="handlers.js" type="module"></script>
-    <script defer src="slider.js" type="module"></script>
-    <script defer src="main.js"></script>
+    <script defer src="js/mockupData.js" type="module"></script>
+    <script defer src="js/renderComponent.js" type="module"></script>
+    <script defer src="js/handlers.js" type="module"></script>
+    <script defer src="js/slider.js" type="module"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <a href="#" onClick="toggleSidebarDetailed()">
-            <img  class="header__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
-        </a>
+        <span class="sidebar-menu__nav__item" onClick="toggleSidebarDetailed()">
+            <a href="#">
+                <img class="header__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
+            </a></span>
         <span class="header__logo">
             <p>LOGO</p>
         </span>
-        <div  class="header__wrapper"><img class="header__wrapper__icon" src="/assets/icons/cart.svg" alt="Cart Icon"><span class="header__wrapper__icon--count">3</span></div>
+        <div class="header__wrapper"><img class="header__wrapper__icon" src="/assets/icons/cart.svg"
+                alt="Cart Icon"><span class="header__wrapper__icon--count">3</span></div>
     </header>
     <section class="container">
         <!-- Блок слайдера -->
-
         <aside class="sidebar">
             <nav class="sidebar-menu">
                 <span class="sidebar__logo">
                     <p>LOGO</p>
                 </span>
                 <!-- Меню навигации -->
-                <span class="sidebar-menu__nav__item">
-                    <a href="#" onClick="toggleSidebarDetailed()">
+                <span class="sidebar-menu__nav__item" onClick="toggleSidebarDetailed()">
+                    <a href="#">
                         <svg class="sidebar-menu__nav__icon">
                             <use xlink:href="assets/sprite.svg#burger">
                             </use>
@@ -159,20 +160,22 @@
     <!-- Подвал -->
     <footer class="footer">
         <div class="footer__top">
-            <aside class="footer__aside footer__aside--info">
-                <p>Lorem</p>
-                <p>Lorem</p>
-                <p>Lorem</p>
-                <p>Lorem</p>
-                <p>Lorem</p>
-                <p>Lorem</p>
-            </aside>
-            <aside class="footer__aside footer__aside--company">
-                <p>О компании</p>
-                <p>Отзывы</p>
-                <p>Блог</p>
-                <p>Контакты</p>
-                <p>Коммерческим покупателям</p>
+            <aside class="footer__aside footer__aside-info">
+                <aside class="footer__aside--info-first">
+                    <p>Lorem</p>
+                    <p>Lorem</p>
+                    <p>Lorem</p>
+                    <p>Lorem</p>
+                    <p>Lorem</p>
+                    <p>Lorem</p>
+                </aside>
+                <aside class="footer__aside--info-company">
+                    <p>О компании</p>
+                    <p>Отзывы</p>
+                    <p>Блог</p>
+                    <p>Контакты</p>
+                    <p>Коммерческим покупателям</p>
+                </aside>
             </aside>
             <aside class="footer__aside footer__aside--logo">
                 <h3 class="footer__aside--logo-logo">LOGO</h3>
@@ -185,8 +188,7 @@
             </aside>
             <aside class="footer__aside footer__aside--action">
                 <button class="footer__aside--action--calculator" onclick="toggleshowModal()">КАЛЬКУЛЯТОР</button>
-                <p class="footer__aside--action-email">Email:<br /><a
-                        href="mailto:example@example.com">example@example.com</a></p>
+                <p class="footer__aside--action-email">E-mail:<a href="mailto:example@example.com">info@lorem.ru</a></p>
                 <ul class="footer__aside--action-options">
                     <li>FB</li>
                     <li>OK</li>
@@ -198,9 +200,13 @@
             </aside>
         </div>
         <div class="footer__bottom">
-            <p>&copy; 2020 Lorem</p>
-            <p>Правила использования cookie Пользовательское соглашение Карта сайта</p>
-            <p>Разработка — Lorem</p>
+            <p class="footer__bottom-copyright">&copy; 2020 Lorem</p>
+            <div class="footer__bottom-info">
+                <p>Правила использования cookie</p>
+                <p>Пользовательское соглашение</p>
+                <p>Карта сайта</p>
+            </div>
+            <p class="footer__bottom-lorem">Разработка — Lorem</p>
         </div>
     </footer>
     <dialog id="modal">

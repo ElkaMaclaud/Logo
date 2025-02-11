@@ -13,17 +13,17 @@ window.MENUI_TEMS = [
 
 window.SLIDER_IMAGES = [
     {
-        src: ["./assets/images/rectangle.png", "./assets/images/rectangleSmall.png"],
+        src: ["../assets/images/rectangle.png", "../assets/images/rectangleSmall.png"],
         alt: "Slide 1",
         caption: "Описание изображения"
     },
     {
-        src: ["./assets/images/image25.png"],
+        src: ["../assets/images/image25.png"],
         alt: "Slide 2",
         caption: "Описание изображения"
     },
     {
-        src: ["./assets/images/nets.png"],
+        src: ["../assets/images/nets.png"],
         alt: "Slide 3",
         caption: "Описание изображения"
     },
@@ -31,22 +31,22 @@ window.SLIDER_IMAGES = [
 
 window.POPULAR_IMAGES = [
     {
-        src: "./assets/images/nets.png",
+        src: "../assets/images/nets.png",
         alt: "Image 1",
         caption: "Описание изображения"
     },
     {
-        src: "./assets/images/vertical.png",
+        src: "../assets/images/vertical.png",
         alt: "Image 2",
         caption: "Описание изображения"
     },
     {
-        src: "./assets/images/day.png",
+        src: "../assets/images/day.png",
         alt: "Image 3",
         caption: "Описание изображения"
     },
     {
-        src: "./assets/images/image25.png",
+        src: "../assets/images/image25.png",
         alt: "Image 3",
         caption: "Описание изображения"
     }
@@ -56,7 +56,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem»",
         oldPrice: 1000,
-        image: "./assets/images/picture.jpg",
+        image: "../assets/images/picture.jpg",
         price: 1200,
         discount: "10%",
         composition: "composition.svg",
@@ -67,7 +67,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem». Длинное название в три строчки",
         oldPrice: 1000,
-        image: "./assets/images/picture2.png",
+        image: "../assets/images/picture2.png",
         price: 1200,
         discount: "10%",
         colors: ["image1.png","image2.png", "image4.png"]
@@ -75,7 +75,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem»",
         oldPrice: 10099,
-        image: "./assets/images/picture3.png",
+        image: "../assets/images/picture3.png",
         price: 8000,
         discount: "20%",
         composition: "composition.svg",
@@ -86,7 +86,7 @@ window.BEST_OFFERS = [
     {
         title: "Короткое название",
         oldPrice: 1000,
-        image: "./assets/images/picture4.png",
+        image: "../assets/images/picture4.png",
         price: 1200,
         discount: "10%",
         composition: "composition.svg",
@@ -97,7 +97,7 @@ window.BEST_OFFERS = [
     {
         title: "Короткое название второго слайда",
         oldPrice: 3500,
-        image: "./assets/images/picture.jpg",
+        image: "../assets/images/picture.jpg",
         price: 2800,
         discount: "20%",
         colors: ["image4.png", "image3.png"]
@@ -105,7 +105,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem». Длинное название в три строчки",
         oldPrice: 4000,
-        image: "./assets/images/picture2.png",
+        image: "../assets/images/picture2.png",
         price: 3600,
         discount: "10%",
         composition: "composition.svg",
@@ -116,7 +116,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem»",
         oldPrice: 4500,
-        image: "./assets/images/picture3.png",
+        image: "../assets/images/picture3.png",
         price: 4000,
         discount: "11%",
         colors: ["image5.png"]
@@ -124,7 +124,7 @@ window.BEST_OFFERS = [
     {
         title: "Короткое название",
         oldPrice: 5000,
-        image: "./assets/images/picture4.png",
+        image: "../assets/images/picture4.png",
         price: 4500,
         discount: "10%",
         composition: "composition.svg",
@@ -135,7 +135,7 @@ window.BEST_OFFERS = [
     {
         title: "Короткое название третьего слайда",
         oldPrice: 5500,
-        image: "./assets/images/picture.jpg",
+        image: "../assets/images/picture.jpg",
         price: 4950,
         discount: "10%",
         colors: ["image4.png", "image3.png"]
@@ -143,7 +143,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem»",
         oldPrice: 6000,
-        image: "./assets/images/picture2.png",
+        image: "../assets/images/picture2.png",
         price: 5400,
         discount: "10%",
         colors: ["image3.png"]
@@ -151,7 +151,7 @@ window.BEST_OFFERS = [
     {
         title: "Короткое название",
         oldPrice: 6500,
-        image: "./assets/images/picture3.png",
+        image: "../assets/images/picture3.png",
         price: 5850,
         discount: "10%",
         composition: "composition.svg",
@@ -162,7 +162,7 @@ window.BEST_OFFERS = [
     {
         title: "Вертикальные жалюзи «Lorem»",
         oldPrice: 7000,
-        image: "./assets/images/picture4.png",
+        image: "../assets/images/picture4.png",
         price: 6300,
         discount: "10%",
         composition: "composition.svg",
@@ -171,9 +171,9 @@ window.BEST_OFFERS = [
         colors: ["image4.png", "image5.png"]
     },
     {
-        title: "Вертикальные жалюзи «Lorem» 13 элемент",
+        title: "Вертикальные жалюзи «Lorem» 13 элемент последний",
         oldPrice: 7000,
-        image: "./assets/images/picture4.png",
+        image: "../assets/images/picture4.png",
         price: 9300,
         discount: "10%",
         composition: "composition.svg",
