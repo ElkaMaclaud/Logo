@@ -693,10 +693,10 @@ strong {
 }
 
 .best__offers__products-card-wrapper-bottom-container-span {
-    position: absolute; 
-    top: 14px; 
-    left: 44px; 
-    max-width: 8px; 
+    position: absolute;
+    top: 14px;
+    left: 44px;
+    max-width: 8px;
     max-height: 8px;
     background-color: transparent;
     border-radius: 50%;
@@ -795,6 +795,7 @@ strong {
     flex-direction: column;
     gap: 13px;
 }
+
 .footer__aside-info {
     min-width: 25%;
     flex-direction: row;
@@ -803,6 +804,7 @@ strong {
     font-size: 13px;
     line-height: 16.82px;
 }
+
 .footer__aside--info-first {
     max-width: 85px;
     display: flex;
@@ -949,8 +951,9 @@ strong {
     .popular__container {
         padding-left: var(--small-padding);
     }
+
     .popular__title {
-        top:5vw;
+        top: 5vw;
         font-size: 245px;
     }
 
@@ -1118,6 +1121,7 @@ strong {
     .best__offers {
         margin: 20px 0 20px 20px;
     }
+
     .best__offers__products {
         gap: 20px
     }
@@ -1134,9 +1138,10 @@ strong {
     .slider__order {
         display: none;
     }
+
     .footer__aside-info {
         justify-content: center;
-        gap: 40%      
+        gap: 40%
     }
 }
 
@@ -1144,17 +1149,24 @@ strong {
     .footer {
         padding: 0;
     }
+
     .footer__top {
         justify-content: center;
+    }
+
+    .footer__aside {
+        padding: var(--padding);
     }
 
     .footer__aside-info {
         width: 100%;
         justify-content: space-between;
+        font-size: 18px;
+        line-height: 23.29px;
     }
 
-    .footer__aside {
-        padding: var(--padding);
+    .footer__aside--info-company {
+        max-width: 100px;
     }
 
     .footer__aside--logo {

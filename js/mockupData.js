@@ -13,7 +13,7 @@ window.MENUI_TEMS = [
 
 window.SLIDER_IMAGES = [
     {
-        src: ["../assets/images/rectangle.png", "../assets/images/rectangleSmall.png"],
+        src: ["../assets/images/rectangle.png", "../assets/images/smallRectangle.png"],
         alt: "Slide 1",
         caption: "Описание изображения"
     },
