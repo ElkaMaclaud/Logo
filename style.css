@@ -1226,3 +1226,17 @@ strong {
         order: 3
     }
 }
+@media screen and (max-width: 700px) {
+    #modal {
+        padding: 30px;
+        width: 300px;
+        height: 500px;
+        z-index: 1;
+    }
+    .modal__icon {
+        margin-left: 210px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+}
