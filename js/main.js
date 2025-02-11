@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.querySelector(".slider__control__action__info");
     renderSlides(sliderTrack, SLIDER_IMAGES, textElement)
 
-    if(innerWidth < 1200) {
+    if (innerWidth < 1200) {
         renderSquares(3, "slider__control-squares", sliderTrack)
     }
     const imageSlider = slider(sliderTrack, SLIDER_IMAGES, textElement);
@@ -26,8 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     renderProductCard("best__offers__products", BEST_OFFERS, infoElement, countSlide)
     const productContainer = document.querySelector(".best__offers__products");
     const productSlider = slider(productContainer, BEST_OFFERS, infoElement, true, margin);
-    bestOffersNextButton.addEventListener("click", productSlider.prev);
-    bestOffersPrevtButton.addEventListener("click", productSlider.next);
+    if (innerWidth > 700) {
+        bestOffersNextButton.addEventListener("click", productSlider.prev);
+        bestOffersPrevtButton.addEventListener("click", productSlider.next);
+    } else {
+        productContainer.addEventListener('touchstart', handleTouchStart);
+        productContainer.addEventListener('touchend', handleTouchEnd);
+    }
 });
 function handleResize() {
     location.reload()

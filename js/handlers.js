@@ -87,3 +87,30 @@ window.widthCalculation = function(array, carts, margin) {
         return {width, widthContainer}
     }
 }
+let startX;
+let productSlider;
+window.handleTouchStart = function (event) {
+    if(!productSlider) {
+        const margin = innerWidth < 1200 ? padding : 66
+        const infoElement = document.querySelector(".best__offers__control__action__info");
+        const productContainer = document.querySelector(".best__offers__products");
+        productSlider = slider(productContainer, BEST_OFFERS, infoElement, true, margin);
+    } 
+    const touch = event.touches[0];
+    startX = touch.clientX;
+}
+
+window.handleTouchEnd = function (event) {
+    const touch = event.changedTouches[0];
+    const endX = touch.clientX;
+
+    const diffX = endX - startX;
+
+    if (Math.abs(diffX) > 0) {
+        if (diffX > 0) {
+            productSlider.prev()
+        } else {
+            productSlider.next()
+        }
+    }
+}
