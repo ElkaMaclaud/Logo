@@ -692,6 +692,17 @@ strong {
     gap: 10px;
 }
 
+.best__offers__products-card-wrapper-bottom-container-span {
+    position: absolute; 
+    top: 14px; 
+    left: 44px; 
+    max-width: 8px; 
+    max-height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #417A82;
+}
+
 .best__offers__products-card-info-price-container {
     max-width: 192px;
     height: 41px;

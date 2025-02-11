@@ -114,9 +114,10 @@ window.renderProductCard = function (containerId, data, infoElement, countSlide)
                     <div class="${containerId}-card-wrapper-top-container-discountInfo"><span>-${slide.discount}</span></div>
                 </div>
                 <div class="${containerId}-card-wrapper-bottom-container">
-                     ${slide.colors.map(item => `
-                <img src="../assets/backgroundImages/${item}" alt="Цвет"></img>
-            `).join('')}
+                ${slide.colors.map((item, index) => `
+                    <img src="../assets/backgroundImages/${item}" alt="Цвет">
+                    ${index === 1 ? `<span class="${containerId}-card-wrapper-bottom-container-span"></span>` : ''}
+                    `).join('')}
                 </div>
             </figure>
             <div class="${containerId}-card-info">
