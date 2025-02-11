@@ -43,23 +43,16 @@
                 <!-- Меню навигации -->
                 <span class="sidebar-menu__nav__item" onClick="toggleSidebarDetailed()">
                     <a href="#">
-                        <svg class="sidebar-menu__nav__icon">
-                            <use xlink:href="assets/sprite.svg#burger">
-                            </use>
-                        </svg>
-                    </a>
-                </span>
+                        <img class="sidebar-menu__nav__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
+                    </a></span>
                 <ul class="sidebar-menu__nav">
                     <!-- Рендерим в js -->
                 </ul>
             </nav>
             <span class="sidebar-menu__nav__item">
                 <a href="#">
-                    <svg class="sidebar-menu__nav__icon">
-                        <use xlink:href="assets/sprite.svg#short-search"></use>
-                    </svg>
-                </a>
-            </span>
+                    <img class="sidebar-menu__nav__icon" src="/assets/icons/short-search.svg" alt="Cart Icon">
+                </a></span>
         </aside>
         <aside class="sidebar_detailed">
             <span class="sidebar_detailed__logo">
@@ -107,11 +100,10 @@
                 </aside>
                 <aside class="slider__order">
                     <button class="slider__order--button">ЗАКАЗАТЬ ЗАМЕР</button>
-                    <span class="slider__order__item"><a href="#">
-                            <svg class="slider__order__item__icon">
-                                <use xlink:href="assets/sprite.svg#cart-icon"></use>
-                            </svg></a>
-                    </span>
+                    <span class="slider__order__item" onClick="toggleSidebarDetailed()">
+                        <a href="#">
+                            <img class="slider__order__item__icon" src="/assets/icons/cart-icon.svg" alt="Cart Icon">
+                        </a></span>
                 </aside>
                 <div class="slider__wrapper">
                     <!-- Рендерим в js -->

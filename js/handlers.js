@@ -45,10 +45,10 @@ window.toggleSidebarDetailed = function () {
 
 window.handleClickOutside = function (event, element) {
     const isClickInsideElement = element.contains(event.target);
-    const button = document.querySelector(".sidebar-menu__nav__icon")
-    const  isButtonClick = button.contains(event.target);
+    const input = document.querySelector(".sidebar_detailed-search-container")
+    const  inputClick = input.contains(event.target);
 
-    if (!isClickInsideElement && !isButtonClick) {
+    if (isClickInsideElement && !inputClick) {
         element.style.display = "none";
         document.removeEventListener("click", (e) => handleClickOutside(e, element, buttonElement));
     }
