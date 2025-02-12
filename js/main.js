@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         productContainer.addEventListener('touchend', handleTouchEnd);
     }
 });
-function handleResize() {
-    location.reload()
-}
-addEventListener('resize', handleResize);
+// Это для отладки при открытии DevTools (чтобы избавить от ручной перезагрузки)
+// function handleResize() {
+//     location.reload()
+// }
+// addEventListener('resize', handleResize);
