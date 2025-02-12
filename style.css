@@ -173,6 +173,7 @@ body {
 }
 
 .sidebar-menu__nav__item {
+    cursor: pointer;
     text-align: center;
 }
 
@@ -235,11 +236,6 @@ body {
     text-align: center;
 }
 
-.sidebar_detailed-search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
 
 .sidebar_detailed-menu__nav {
     max-height: 379px;
@@ -266,6 +262,12 @@ body {
 .sidebar_detailed-menu__nav__item .sidebar_detailed-menu__nav__icon {
     width: 21px;
     height: 21px;
+}
+
+.sidebar_detailed-search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar_detailed-search-container input[type="text"] {

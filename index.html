@@ -23,10 +23,9 @@
 
 <body>
     <header class="header">
-        <span class="sidebar-menu__nav__item" onClick="toggleSidebarDetailed()">
-            <a href="#">
-                <img class="header__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
-            </a></span>
+        <span class="sidebar-menu__nav__item burger" onClick="toggleSidebarDetailed()">
+            <img class="header__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
+        </span>
         <span class="header__logo">
             <p>LOGO</p>
         </span>
@@ -41,18 +40,16 @@
                     <p>LOGO</p>
                 </span>
                 <!-- Меню навигации -->
-                <span class="sidebar-menu__nav__item" onClick="toggleSidebarDetailed()">
-                    <a href="#">
-                        <img class="sidebar-menu__nav__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
-                    </a></span>
+                <span class="sidebar-menu__nav__item burger" onClick="toggleSidebarDetailed()">
+                    <img class="sidebar-menu__nav__icon" src="/assets/icons/burger.svg" alt="Cart Icon">
+                </span>
                 <ul class="sidebar-menu__nav">
                     <!-- Рендерим в js -->
                 </ul>
             </nav>
-            <span class="sidebar-menu__nav__item">
-                <a href="#">
-                    <img class="sidebar-menu__nav__icon" src="/assets/icons/short-search.svg" alt="Cart Icon">
-                </a></span>
+            <span class="sidebar-menu__nav__item burger" onClick="toggleSidebarDetailed()">
+                <img class="sidebar-menu__nav__icon" src="/assets/icons/short-search.svg" alt="Cart Icon">
+            </span>
         </aside>
         <aside class="sidebar_detailed">
             <span class="sidebar_detailed__logo">
@@ -71,9 +68,7 @@
             </nav>
             <div class="sidebar_detailed-search-container">
                 <input type="text" placeholder="Поиск">
-                <a href="#" class="sidebar_detailed-search-container--icon">
-                    <img src="assets/icons/search.svg" alt="">
-                </a>
+                <img class="sidebar_detailed-search-container--icon" src="assets/icons/search.svg" alt="">
             </div>
             <div class="sidebar_detailed-link">
                 <a href="#">О компании</a>
@@ -94,13 +89,13 @@
                     <aside class="slider__info--description">
                         «Lorem» — производитель изделий для внутренней и внешней<br>lorem
                     </aside>
-                    <button class="slider__info--calculate" onclick="toggleshowModal()">
+                    <button class="slider__info--calculate modal" onclick="toggleshowModal()">
                         <p>КАЛЬКУЛЯТОР</p>
                     </button>
                 </aside>
                 <aside class="slider__order">
                     <button class="slider__order--button">ЗАКАЗАТЬ ЗАМЕР</button>
-                    <span class="slider__order__item" onClick="toggleSidebarDetailed()">
+                    <span class="slider__order__item">
                         <a href="#">
                             <img class="slider__order__item__icon" src="/assets/icons/cart-icon.svg" alt="Cart Icon">
                         </a></span>
@@ -179,7 +174,7 @@
                 </aside>
             </aside>
             <aside class="footer__aside footer__aside--action">
-                <button class="footer__aside--action--calculator" onclick="toggleshowModal()">КАЛЬКУЛЯТОР</button>
+                <button class="footer__aside--action--calculator modal" onclick="toggleshowModal()">КАЛЬКУЛЯТОР</button>
                 <p class="footer__aside--action-email">E-mail:<a href="mailto:example@example.com">info@lorem.ru</a></p>
                 <ul class="footer__aside--action-options">
                     <li>FB</li>

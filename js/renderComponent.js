@@ -22,15 +22,16 @@ window.renderMenu = function (menuItems, menuSelector, text) {
         a.appendChild(img);
         li.appendChild(a);
 
-        if (valueIcon === "Калькулятор") {
-            li.addEventListener("click", toggleshowModal)
-        }
-
         if (text) {
             const p = document.createElement("p");
             p.classList.add(`${menuSelector}__text`);
             p.textContent = valueIcon === "Калькулятор" ? "Калькулятор" : "Lorem"
             li.appendChild(p);
+        }
+        
+        if (valueIcon === "Калькулятор") {
+            li.classList.add(`modal`);
+            li.addEventListener("click", toggleshowModal)
         }
         menuContainer.appendChild(li);
     });
