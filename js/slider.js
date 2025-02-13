@@ -19,7 +19,7 @@ window.slider = function (element, array, textElement, carts, margin) {
                 shearWidth = currentIndex * width
             } else if (widthContainer - width * (currentIndex + 1) > 0) {
                 const baseWidth = actualWidthContainer || width;
-                shearWidth = currentIndex * baseWidth + widthContainer - baseWidth * (currentIndex + 1) + (actualWidthContainer ? 0 : margin);
+                shearWidth = widthContainer - baseWidth + (actualWidthContainer ? 0 : margin);
                 currentIndex++
             } else { return };
         } else {
